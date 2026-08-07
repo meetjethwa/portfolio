@@ -1,0 +1,54 @@
+import { Router } from "express";
+import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DATA_FILE = path.join(__dirname, "..", "data", "messages.json");
+
+const router = Router();
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+router.post("/", async (req, res) => {
+  const { name, email, message } = req.body || {};
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "Name, email, and message are all required." });
+  }
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: "That email address doesn't look valid." });
+  }
+
+  const entry = {
+    name: String(name).trim().slice(0, 200),
+    email: String(email).trim().slice(0, 200),
+    message: String(message).trim().slice(0, 5000),
+    receivedAt: new Date().toISOString(),
+  };
+
+  try {
+    let existing = [];
+    try {
+      const raw = await fs.readFile(DATA_FILE, "utf-8");
+      existing = JSON.parse(raw);
+    } catch {
+      existing = [];
+    }
+    existing.push(entry);
+    await fs.writeFile(DATA_FILE, JSON.stringify(existing, null, 2));
+
+    // To actually receive these by email instead of / in addition to
+    // storing them, wire up nodemailer (or an API like Resend/SendGrid)
+    // here using your own credentials in a .env file.
+
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    console.error("Failed to save contact message:", err);
+    return res.status(500).json({ error: "Something went wrong on the server." });
+  }
+});
+
+export default router;
