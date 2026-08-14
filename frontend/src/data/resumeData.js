@@ -22,7 +22,7 @@ export const summary =
 
 export const facts = [
   { label: "Based in", value: "Vadodara, Gujarat" },
-  { label: "Work mode", value: "On-Site" },
+  { label: "Work mode", value: "On-site · Internship · Freelancing · Part-time" },
   { label: "Education", value: "B.Tech, Computer Engineering" },
   { label: "Languages", value: "English, Hindi, Gujarati" },
   { label: "Status", value: "Open to opportunities" },
@@ -79,12 +79,20 @@ export const skills = [
 
 export const projects = [
   {
-    name: "Growthkar",
-    tag: "Main project",
+    name: "IBM Attrition HR Analytics Dashboard",
+    tag: "Power BI dashboard",
     category: "data",
-    period: "Sep 2024 — Present",
-    desc: "A data-driven outsourcing services platform. Owned data collection, cleaning, and analysis with Excel and SQL, and built Power BI dashboards to track key metrics and support decisions.",
-    link: null,
+    period: "2026",
+    desc: "An interactive HR analytics dashboard built in Power BI to examine employee attrition, workforce demographics, job roles, compensation, and key retention trends.",
+    link: "/HR-Attrition-Dashboard-Integrated.pbix",
+  },
+  {
+    name: "Business Sales Dashboard",
+    tag: "Power BI dashboard",
+    category: "data",
+    period: "2026",
+    desc: "An interactive sales dashboard built in Power BI to track revenue, profit, sales trends, top-performing products, regions, and customer segments for clearer business decisions.",
+    link: "/Business-Sales-Dashboard.pbix",
   },
   {
     name: "Turfify",
@@ -137,11 +145,13 @@ export const education = [
   {
     title: "12th (HSC)",
     sub: "Phoenix School, GSHSEB",
+    percentage: "47%",
     date: "06/2021 — 06/2022",
   },
   {
     title: "10th (SSC)",
     sub: "Ambe School, CBSE",
+    percentage: "75%",
     date: "06/2019 — 06/2020",
   },
 ];

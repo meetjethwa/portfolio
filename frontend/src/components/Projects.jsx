@@ -43,7 +43,7 @@ export default function Projects() {
           <div className="project-group-head">
             <span className="project-group-number mono">02</span>
             <div>
-              <h3>Development</h3>
+              <h3> Web Development</h3>
               <p>Full-stack applications, responsive interfaces, and web builds.</p>
             </div>
           </div>

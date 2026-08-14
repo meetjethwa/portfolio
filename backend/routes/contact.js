@@ -2,9 +2,21 @@ import { Router } from "express";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import nodemailer from "nodemailer";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_FILE = path.join(__dirname, "..", "data", "messages.json");
+const RECIPIENT_EMAIL = process.env.CONTACT_RECIPIENT_EMAIL || "meetjethwa178@gmail.com";
+
+const transporter = process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD
+  ? nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    })
+  : null;
 
 const router = Router();
 
@@ -40,13 +52,29 @@ router.post("/", async (req, res) => {
     existing.push(entry);
     await fs.writeFile(DATA_FILE, JSON.stringify(existing, null, 2));
 
-    // To actually receive these by email instead of / in addition to
-    // storing them, wire up nodemailer (or an API like Resend/SendGrid)
-    // here using your own credentials in a .env file.
+    if (!transporter) {
+      return res.status(503).json({
+        error: "Email delivery is not configured on the server yet.",
+      });
+    }
+
+    await transporter.sendMail({
+      from: `Portfolio contact form <${process.env.GMAIL_USER}>`,
+      to: RECIPIENT_EMAIL,
+      replyTo: entry.email,
+      subject: "New portfolio contact message",
+      text: [
+        `Name: ${entry.name}`,
+        `Email: ${entry.email}`,
+        "",
+        "Message:",
+        entry.message,
+      ].join("\n"),
+    });
 
     return res.status(200).json({ success: true });
   } catch (err) {
-    console.error("Failed to save contact message:", err);
+    console.error("Failed to process contact message:", err);
     return res.status(500).json({ error: "Something went wrong on the server." });
   }
 });

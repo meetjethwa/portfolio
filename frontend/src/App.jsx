@@ -6,6 +6,8 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Education from "./components/Education";
+import Achievements from "./components/achievements/Achievements";
+import Hobbies from "./components/hobbies/Hobbies";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -37,6 +39,8 @@ export default function App() {
       <Skills />
       <Projects />
       <Education />
+      <Achievements />
+      <Hobbies />
       <Contact />
       <Footer />
     </>
