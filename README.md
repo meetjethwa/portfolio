@@ -72,3 +72,4 @@ a transactional email API like Resend or SendGrid), add your credentials to a
 - **Colors, fonts, spacing:** CSS custom properties at the top of
   `frontend/src/styles/index.css`
 - **Sections:** each section is its own component in `frontend/src/components/`
+"# Portfolio-Website" 
