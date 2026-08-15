@@ -73,3 +73,4 @@ a transactional email API like Resend or SendGrid), add your credentials to a
   `frontend/src/styles/index.css`
 - **Sections:** each section is its own component in `frontend/src/components/`
 "# Portfolio-Website" 
+"# my-portfolio" 
