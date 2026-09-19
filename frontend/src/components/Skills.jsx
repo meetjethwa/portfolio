@@ -14,6 +14,7 @@ const skillHoverColors = {
   "Node.js": { background: "#339933", color: "#FFFFFF" },
   MongoDB: { background: "#13AA52", color: "#FFFFFF" },
   MySQL: { background: "#4479A1", color: "#FFFFFF" },
+  
 };
 
 export default function Skills() {
@@ -22,7 +23,6 @@ export default function Skills() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">Skills</h2>
-          <span className="section-index mono">03 / Toolkit</span>
         </div>
 
         <div className="skills-grid">

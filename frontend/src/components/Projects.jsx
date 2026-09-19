@@ -25,7 +25,6 @@ export default function Projects() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">Projects</h2>
-          <span className="section-index mono">04 / Shipped</span>
         </div>
 
         <div className="project-group">

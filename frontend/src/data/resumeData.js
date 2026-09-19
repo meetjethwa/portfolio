@@ -13,8 +13,7 @@ export const profile = {
   linkedinUrl: "https://linkedin.com/in/meet-jethwa-6a0131223",
   github: "github.com/meetjethwa",
   githubUrl: "https://github.com/meetjethwa",
-
-  workMode: "On-Site",
+  Naukri : "https://www.naukri.com/mnjuser/profile"
 };
 
 export const summary =
@@ -61,11 +60,11 @@ export const experience = [
 export const skills = [
   {
     group: "Data & Visualization",
-    items: ["Excel", "SQL", "Power BI", "Data Cleaning", "Data Validation", "Python (automation)"],
+    items: ["Excel", "SQL", "Power BI", "Data Cleaning", "Data Validation", "Python", "Tableau"],
   },
   {
     group: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React.js", "Responsive Design"],
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Responsive Design", "Figma"],
   },
   {
     group: "Backend",
@@ -82,7 +81,7 @@ export const projects = [
     name: "IBM Attrition HR Analytics Dashboard",
     tag: "Power BI dashboard",
     category: "data",
-    period: "2026",
+    period: "Jul 2026- Aug 2026",
     desc: "An interactive HR analytics dashboard built in Power BI to examine employee attrition, workforce demographics, job roles, compensation, and key retention trends.",
     link: "/HR-Attrition-Dashboard-Integrated.pbix",
   },
@@ -90,7 +89,7 @@ export const projects = [
     name: "Business Sales Dashboard",
     tag: "Power BI dashboard",
     category: "data",
-    period: "2026",
+    period: "Jul 2026- Jul 2026",
     desc: "An interactive sales dashboard built in Power BI to track revenue, profit, sales trends, top-performing products, regions, and customer segments for clearer business decisions.",
     link: "/Business-Sales-Dashboard.pbix",
   },
@@ -122,7 +121,7 @@ export const projects = [
     name: "Personal Portfolio",
     tag: "Web design",
     category: "development",
-    period: "Jan 2026 — Present",
+    period: "Jan 2026 — 2026",
     desc: "A responsive portfolio site showcasing projects, skills, and experience with an optimized, distraction-free UI.",
     link: null,
   },
@@ -130,7 +129,7 @@ export const projects = [
     name: "Clone Series",
     tag: "Practice builds",
     category: "development",
-    period: "2022 — Present",
+    period: "2022 — 2023",
     desc: "Responsive front-end clones — Spotify, Netflix, and Instagram — built to sharpen UI implementation and layout precision.",
     link: null,
   },
@@ -157,7 +156,14 @@ export const education = [
 ];
 
 export const certificates = [
-  { title: "Data Structures and Algorithms", sub: "Certification" },
-  { title: "Data Analytics", sub: "SimpleLearn · Certification" },
-  { title: "Full Stack Developer", sub: "SimpleLearn · Certification" },
+  { title: "Computer Networks and Internet Protocols", sub: "NPTEL - IIT Kharagpur" },
+  { title: "Internet of Things", sub: "NPTEL - IIT Kharagpur" },
+  { title: "Generative AI", sub: "SimpleLearn " },
+  { title: "Introduction to Tableau", sub: "SimpleLearn " },
+  { title: "Essentials of Data Visualization using MS Excel", sub: "UniAthena" },
+  { title: "Introduction to Power BI", sub: "UniAthena" },
+  { title: "Introduction to Data Analysis", sub: "SimpleLearn" },
+  { title: "Data Structures and Algorithms", sub: "SimpleLearn " },
+  { title: "Data Analytics", sub: "SimpleLearn " },
+  { title: "Full Stack Developer", sub: "SimpleLearn" },
 ];

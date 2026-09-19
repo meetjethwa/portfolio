@@ -10,7 +10,6 @@ export default function Hobbies() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">Hobbies &amp; Interests</h2>
-          <span className="section-index mono">08 / Beyond Work</span>
         </div>
 
         <div className="hobbies-list">

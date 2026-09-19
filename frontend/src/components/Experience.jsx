@@ -6,7 +6,6 @@ export default function Experience() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">Experience</h2>
-          <span className="section-index mono">02 / Ledger</span>
         </div>
 
         <div className="ledger">

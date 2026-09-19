@@ -7,7 +7,6 @@ export default function Education() {
         <div className="container">
           <div className="section-head">
             <h2 className="section-title">Education</h2>
-            <span className="section-index mono">05 / Record</span>
           </div>
 
           <div className="record-list">
@@ -29,7 +28,6 @@ export default function Education() {
         <div className="container">
           <div className="section-head">
             <h2 className="section-title">Certifications</h2>
-            <span className="section-index mono">06 / Credentials</span>
           </div>
 
           <div className="record-list">

@@ -6,7 +6,6 @@ export default function About() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">About</h2>
-          <span className="section-index mono">01 / Profile</span>
         </div>
 
         <div className="about-grid">

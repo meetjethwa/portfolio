@@ -33,7 +33,6 @@ export default function Contact() {
       <div className="container">
         <div className="section-head">
           <h2 className="section-title">Contact</h2>
-          <span className="section-index mono">06 / Reach out</span>
         </div>
 
         <div className="contact-wrap">
@@ -60,7 +59,9 @@ export default function Contact() {
                   {profile.github}
                 </a>
               </li>
+              
               <li>Location — {profile.location}</li>
+
             </ul>
           </div>
 

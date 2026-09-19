@@ -53,10 +53,10 @@ button { font: inherit; cursor: pointer; }
 :focus-visible { outline: 3px solid rgba(49, 95, 212, .35); outline-offset: 3px; }
 .mono { font-family: var(--font-mono); }
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
-section { padding: clamp(56px, 7vw, 88px) 0; }
-.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 28px; margin-bottom: 32px; }
+section { padding: clamp(28px, 4vw, 52px) 0; }
+.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 18px; }
 .section-title { font: 600 clamp(39px, 5vw, 62px)/.98 var(--font-display); letter-spacing: -.045em; }
-.section-index { color: var(--accent); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.section-index { display: none; }
 
 /* Navigation */
 .nav { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: var(--nav-bg); backdrop-filter: blur(14px); }
@@ -106,7 +106,7 @@ section { padding: clamp(56px, 7vw, 88px) 0; }
 
 /* Experience */
 .ledger { border-top: 1px solid var(--line-dark); }
-.ledger-row { display: grid; grid-template-columns: 170px 1fr; gap: clamp(28px, 7vw, 92px); padding: 39px 0; border-bottom: 1px solid var(--line); }
+.ledger-row { display: grid; grid-template-columns: 170px 1fr; gap: clamp(22px, 5vw, 60px); padding: 24px 0; border-bottom: 1px solid var(--line); }
 .ledger-date { padding-top: 5px; color: var(--accent); font-size: 13px; }
 .ledger-role { font: 600 clamp(25px, 3vw, 32px)/1.1 var(--font-display); letter-spacing: -.04em; }
 .ledger-org { margin: 7px 0 16px; color: var(--accent); font-size: 15px; font-weight: 700; }
@@ -122,8 +122,8 @@ section { padding: clamp(56px, 7vw, 88px) 0; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; color: var(--ink-soft); background: var(--tag-bg); font: 11px var(--font-mono); transition: border-color .16s ease, color .16s ease, background .16s ease; }
 .tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-pale); }
-.project-group + .project-group { margin-top: 62px; }
-.project-group-head { margin-bottom: 19px; }
+.project-group + .project-group { margin-top: 28px; }
+.project-group-head { margin-bottom: 14px; }
 .project-group-number { display: none; }
 .project-group-head h3 { font: 600 26px/1.15 var(--font-display); letter-spacing: -.035em; }
 .project-group-head p { margin-top: 5px; color: var(--ink-faint); font-size: 14px; }
@@ -157,7 +157,7 @@ section { padding: clamp(56px, 7vw, 88px) 0; }
 
 /* Hobbies */
 .hobbies-list { max-width: 760px; border-top: 2px solid var(--ink); }
-.hobby-item { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.hobby-item { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .hobby-item h3 { font: 600 24px/1.1 var(--font-display); letter-spacing: -.035em; }
 .hobby-item p { color: var(--ink-soft); font-size: 14px; text-align: right; }
 
