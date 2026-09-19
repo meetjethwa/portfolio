@@ -1,11 +1,10 @@
-// All portfolio content lives here — edit this file to update the site
-// without touching any component code.
+// Portfolio content sourced from Meet Jethawa's current resume.
 
 export const profile = {
   name: "Meet Jethawa",
-  role: "Data Analyst & Full Stack Developer",
+  role: "Data Analyst",
   tagline:
-    "I turn raw spreadsheets and databases into dashboards people actually use — and I build the web apps around them, end to end.",
+    "I collect, clean, and validate data, then turn it into dashboards and reports that support better business decisions.",
   email: "meetjethwa178@gmail.com",
   phone: "+91 8511231606",
   location: "Vadodara, Gujarat, India",
@@ -13,24 +12,22 @@ export const profile = {
   linkedinUrl: "https://linkedin.com/in/meet-jethwa-6a0131223",
   github: "github.com/meetjethwa",
   githubUrl: "https://github.com/meetjethwa",
-  Naukri : "https://www.naukri.com/mnjuser/profile"
+  Naukri: "https://www.naukri.com/mnjuser/profile",
 };
 
 export const summary =
-  "Detail-oriented data analyst with strong proficiency in Excel, SQL, and Power BI, focused on collecting, cleaning, and validating data to support real business decisions. I build dashboards, automate recurring reports, and streamline data workflows for operational efficiency — backed by a full-stack developer's ability to ship the applications that data lives in, and a working knowledge of Python for automation.";
+  "Detail-oriented Data Operations Analyst with strong proficiency in Microsoft Excel, SQL, and data-visualization tools such as Microsoft Power BI. Skilled in data collection, cleaning, validation, and analysis to support business decision-making. I create dashboards, generate reports, and improve data workflows for operational efficiency, with strong analytical thinking, problem-solving ability, attention to detail, and a working knowledge of Python for automation and data handling.";
 
 export const facts = [
   { label: "Based in", value: "Vadodara, Gujarat" },
-  { label: "Work mode", value: "On-site · Internship · Freelancing · Part-time" },
-  { label: "Education", value: "B.Tech, Computer Engineering" },
+  { label: "Education", value: "B.Tech, Parul Institute of Engineering and Technology" },
   { label: "Languages", value: "English, Hindi, Gujarati" },
-  { label: "Status", value: "Open to opportunities" },
 ];
 
 export const kpis = [
   { value: "1+ yr", label: "Data analysis experience", active: true },
-  { value: "6", label: "Shipped projects & apps" },
-  { value: "3", label: "Professional certifications" },
+  { value: "7", label: "Projects" },
+  { value: "9", label: "Certifications" },
   { value: "3", label: "Languages spoken" },
 ];
 
@@ -42,7 +39,7 @@ export const experience = [
     points: [
       "Built responsive web applications with RESTful APIs and secure JWT/session authentication.",
       "Designed and integrated databases; collaborated across the full SDLC using Agile practices.",
-      "Tested, debugged, and optimized web solutions for scalability.",
+      "Tested, debugged, and optimized scalable web solutions.",
     ],
   },
   {
@@ -50,8 +47,8 @@ export const experience = [
     role: "Lead Data Analyst",
     org: "Growthkar (SME Startup) · Vadodara, Gujarat",
     points: [
-      "Built interactive Power BI dashboards from Excel and SQL data to drive data-driven decisions.",
-      "Automated recurring reports, cutting manual reporting effort significantly.",
+      "Built interactive Power BI dashboards from Excel and SQL data to support data-driven decisions.",
+      "Automated recurring reports, reducing manual reporting effort.",
       "Monitored KPIs and improved data accuracy, security, and compliance.",
     ],
   },
@@ -59,39 +56,59 @@ export const experience = [
 
 export const skills = [
   {
-    group: "Data & Visualization",
-    items: ["Excel", "SQL", "Power BI", "Data Cleaning", "Data Validation", "Python", "Tableau"],
+    group: "Data Visualization",
+    items: ["Excel", "Power BI", "Tableau", "Data Collection", "Data Validation", "Dashboards"],
+  },
+  {
+    group: "Programming Languages",
+    items: ["Java", "Python", "JavaScript", "C++"],
   },
   {
     group: "Frontend",
-    items: ["HTML", "CSS", "JavaScript", "React.js", "Responsive Design", "Figma"],
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Responsive Web Design"],
   },
   {
-    group: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "JWT / Session Auth"],
+    group: "Backend & Database",
+    items: ["Node.js", "Express.js", "RESTful APIs", "JWT / Session Auth", "MongoDB", "MySQL", "SQL"],
   },
   {
-    group: "Database & Tools",
-    items: ["MongoDB", "MySQL", "Git & GitHub", "VS Code", "Postman"],
+    group: "Tools & Platforms",
+    items: ["Git & GitHub", "VS Code", "Postman", "Jupyter Notebook", "Google Colab"],
   },
 ];
 
 export const projects = [
   {
-    name: "IBM Attrition HR Analytics Dashboard",
+    name: "Business Analytics Dashboard",
     tag: "Power BI dashboard",
     category: "data",
-    period: "Jul 2026- Aug 2026",
-    desc: "An interactive HR analytics dashboard built in Power BI to examine employee attrition, workforce demographics, job roles, compensation, and key retention trends.",
+    period: "Aug 2026",
+    desc: "An interactive business analytics dashboard for monitoring performance and supporting clearer decisions.",
+    link: "/Business-Sales-Dashboard.pbix",
+  },
+  {
+    name: "HR Analytics Dashboard",
+    tag: "Power BI dashboard",
+    category: "data",
+    period: "Jul 2026",
+    desc: "An interactive Power BI dashboard for examining employee attrition, workforce demographics, job roles, compensation, and retention trends.",
     link: "/HR-Attrition-Dashboard-Integrated.pbix",
   },
   {
-    name: "Business Sales Dashboard",
-    tag: "Power BI dashboard",
-    category: "data",
-    period: "Jul 2026- Jul 2026",
-    desc: "An interactive sales dashboard built in Power BI to track revenue, profit, sales trends, top-performing products, regions, and customer segments for clearer business decisions.",
-    link: "/Business-Sales-Dashboard.pbix",
+    name: "Growthkar",
+    tag: "Full-stack app",
+    category: "development",
+    period: "Sep 2024 — Sep 2025",
+    desc: "An outsourcing-services platform developed as the main project for Growthkar.",
+    link: null,
+  },
+  {
+    name: "Personal Portfolio Website",
+    tag: "Web design",
+    category: "development",
+    period: "Jan 2026 — Feb 2026",
+    desc: "A responsive portfolio website showcasing projects, skills, and experience with a focused interface.",
+    link: null,
   },
   {
     name: "Turfify",
@@ -105,65 +122,48 @@ export const projects = [
     name: "TaskNest",
     tag: "Full-stack app",
     category: "development",
-    period: "Apr 2026 — Present",
-    desc: "A task management app supporting task creation, deadlines, and status tracking to boost productivity.",
+    period: "Apr 2026 — Jun 2026",
+    desc: "A task-management app supporting task creation, deadlines, and status tracking.",
     link: null,
   },
   {
     name: "HabitPulse",
     tag: "Full-stack app",
     category: "development",
-    period: "May 2026 — Present",
-    desc: "A habit-tracking app with progress monitoring and performance analysis to build consistency toward goals.",
-    link: null,
-  },
-  {
-    name: "Personal Portfolio",
-    tag: "Web design",
-    category: "development",
-    period: "Jan 2026 — 2026",
-    desc: "A responsive portfolio site showcasing projects, skills, and experience with an optimized, distraction-free UI.",
-    link: null,
-  },
-  {
-    name: "Clone Series",
-    tag: "Practice builds",
-    category: "development",
-    period: "2022 — 2023",
-    desc: "Responsive front-end clones — Spotify, Netflix, and Instagram — built to sharpen UI implementation and layout precision.",
+    period: "May 2026 — Jul 2026",
+    desc: "A habit-tracking app with progress monitoring and performance analysis to build consistency.",
     link: null,
   },
 ];
 
 export const education = [
   {
-    title: "B.Tech, Computer Engineering",
+    title: "Bachelor in Technology (B.Tech)",
     sub: "Parul Institute of Engineering and Technology · CGPA 6.62/10",
-    date: "09/2022 — Present",
+    date: "Sep 2022 — Present",
   },
   {
     title: "12th (HSC)",
     sub: "Phoenix School, GSHSEB",
     percentage: "47%",
-    date: "06/2021 — 06/2022",
+    date: "Jun 2021 — Jun 2022",
   },
   {
     title: "10th (SSC)",
     sub: "Ambe School, CBSE",
     percentage: "75%",
-    date: "06/2019 — 06/2020",
+    date: "Jun 2019 — Jun 2020",
   },
 ];
 
 export const certificates = [
-  { title: "Computer Networks and Internet Protocols", sub: "NPTEL - IIT Kharagpur" },
-  { title: "Internet of Things", sub: "NPTEL - IIT Kharagpur" },
-  { title: "Generative AI", sub: "SimpleLearn " },
-  { title: "Introduction to Tableau", sub: "SimpleLearn " },
-  { title: "Essentials of Data Visualization using MS Excel", sub: "UniAthena" },
-  { title: "Introduction to Power BI", sub: "UniAthena" },
-  { title: "Introduction to Data Analysis", sub: "SimpleLearn" },
-  { title: "Data Structures and Algorithms", sub: "SimpleLearn " },
-  { title: "Data Analytics", sub: "SimpleLearn " },
-  { title: "Full Stack Developer", sub: "SimpleLearn" },
+  { title: "Computer Network and Internet Protocol", sub: "IIT Kharagpur", date: "Jan 2024 — Apr 2024" },
+  { title: "Introduction to Internet of Things", sub: "IIT Kharagpur", date: "Jul 2025 — Oct 2025" },
+  { title: "Introduction to Generative AI", sub: "Simplilearn | SkillUp", date: "Jul 2025 — Aug 2025" },
+  { title: "Exploratory Data Analysis by Accenture", sub: "Prime Skills Future", date: "Aug 2026 — Sep 2026" },
+  { title: "MS Excel: Basics & Data Visualization Essentials", sub: "UniAthena", date: "Aug 2026" },
+  { title: "Basics of Microsoft Power BI", sub: "UniAthena", date: "Jul 2026 — Aug 2026" },
+  { title: "Introduction to Tableau", sub: "Simplilearn | SkillUp", date: "Aug 2026 — Sep 2026" },
+  { title: "Introduction to Data Analytics", sub: "Simplilearn | SkillUp", date: "Jun 2026" },
+  { title: "Data Structures and Algorithms", sub: "Simplilearn | SkillUp", date: "Mar 2025" },
 ];

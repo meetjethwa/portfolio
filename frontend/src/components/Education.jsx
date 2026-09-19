@@ -35,6 +35,7 @@ export default function Education() {
               <div className="stack-item" key={c.title}>
                 <div className="stack-item-title">{c.title}</div>
                 <div className="stack-item-sub">{c.sub}</div>
+                {c.date && <div className="stack-item-date">{c.date}</div>}
               </div>
             ))}
           </div>

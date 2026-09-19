@@ -3,12 +3,22 @@ import { profile } from "../data/resumeData";
 
 export default function Hero() {
   const [typedRole, setTypedRole] = useState("");
+  const [typedTagline, setTypedTagline] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const roles = ["Data Analyst", "Full Stack Developer"];
+  const roles = [
+    {
+      title: "Data Analyst",
+      tagline: "Turning raw data into clear decisions.",
+    },
+    {
+      title: "Full Stack Developer",
+      tagline: "Building reliable web experiences, end to end.",
+    },
+  ];
 
   useEffect(() => {
-    const role = roles[roleIndex];
+    const role = roles[roleIndex].title;
     let delay = isDeleting ? 45 : 85;
 
     if (!isDeleting && typedRole === role) {
@@ -33,17 +43,25 @@ export default function Hero() {
     return () => window.clearTimeout(timer);
   }, [typedRole, roleIndex, isDeleting]);
 
+  useEffect(() => {
+    const tagline = roles[roleIndex].tagline;
+    let characterIndex = 0;
+    setTypedTagline("");
+
+    const timer = window.setInterval(() => {
+      characterIndex += 1;
+      setTypedTagline(tagline.slice(0, characterIndex));
+      if (characterIndex === tagline.length) window.clearInterval(timer);
+    }, 42);
+
+    return () => window.clearInterval(timer);
+  }, [roleIndex]);
+
   return (
     <section id="top" className="hero">
       <div className="container hero-inner">
         <div className="hero-layout">
           <div className="hero-copy">
-            <div className="hero-top">
-              <span className="status">
-                {profile.availability}
-              </span>
-            </div>
-
             <p className="hero-profession">
               {typedRole}
               <span className="typing-cursor" aria-hidden="true">|</span>
@@ -52,7 +70,10 @@ export default function Hero() {
               {profile.name.split(" ")[0]} <em>{profile.name.split(" ").slice(1).join(" ")}</em>
             </h1>
 
-            <p className="hero-role">{profile.tagline}</p>
+            <p className="hero-role">
+              {typedTagline}
+              <span className="typing-cursor" aria-hidden="true">|</span>
+            </p>
             <p className="hero-location">Based in {profile.location}</p>
 
             <div className="hero-actions">
